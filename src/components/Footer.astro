@@ -1,6 +1,33 @@
 ---
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import ikon1 from "../assets/images/facebook.svg";
+import ikon2 from "../assets/images/instagram.svg";
+import ikon3 from "../assets/images/youtube.svg";
+import ikon4 from "../assets/images/twitter.svg";
+import ikon5 from "../assets/images/linkedin.svg";
+import logo from "../assets/images/logo_footer.svg";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<section class="my-8">
+  <div class="md:flex justify-center text-center md:gap-60">
+    <div class="mb-16 justify-center">
+      <h3 class="font-rubik text-blue text-xl pb-4">Nyhedsbrev</h3>
+      <div class="flex justify-center gap-2">
+        <input type="email" placeholder="din email" class="rounded-[32px] border-2 border-pink text-pink placeholder-blue focus:ring-0 focus:border-pink" />
+        <Button type="submit">Tilmeld nu</Button>
+      </div>
+    </div>
+    <div class="mb-16">
+      <h3 class="font-rubik text-blue text-xl pb-4">Følg os</h3>
+      <div class="flex justify-center gap-8">
+        <Image src={ikon1} alt="" />
+        <Image src={ikon2} alt="" />
+        <Image src={ikon3} alt="" />
+        <Image src={ikon4} alt="" />
+        <Image src={ikon5} alt="" />
+      </div>
+    </div>
+  </div>
+  <a href="https://plasticchange.dk"><Image src={logo} alt="Plastic change logo" class="m-auto" /></a>
+</section>
