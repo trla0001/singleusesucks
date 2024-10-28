@@ -7,10 +7,16 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <article class="pt-64 bg-slate-600">
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p class="p-t-64">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
+  <article class="flex items-center justify-center min-h-screen bg-blue">
+    <section class="text-center">
+      <h3 class="text-h3_s md:text-h3_m lg:text-h3 mx-auto text-white">
+        Plastikforurening <span class="text-pink">påvirker os alle</span>
+      </h3>
+      <div class="flex items-center justify-center max-w-4xl pt-8 pl-4 lg:pl-10">
+        <p class="text-p_s md:text-p_m lg:text-p mx-auto text-white text-left">
+          Hvert år ender omkring <span class="font-bold">950.000</span> tons mikroplastik i naturen, hvilket udgør en alvorlig trussel mod dyr i alle størrelser, som enten spiser plastikken eller vikles ind i den.
+        </p>
+      </div>
+    </section>
   </article>
 </MainLayout>
