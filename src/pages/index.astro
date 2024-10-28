@@ -25,9 +25,68 @@ import hero from "../assets/images/new_hero.png";
   </section>
   <section id="støt">
     <article>
-      <h3>Hjælp os med at <span>stoppe forureningen</span> i dag</h3>
-      <div>
-        <p>Jeg vil gerne donere et beløb antal gange med betalingsform. Jeg bor i postnummer, og kan kontaktes på tlf. eller email. Jeg ønsker fradrag fra SKAT, og giver mit samtykke til Plastic Change. Med venlig hilsen, fornavn efternavn</p>
+      <h3 class="font-rubik text-xl md:text-4xl text-blue text-center">Hjælp os med at <span class="text-pink">stoppe forureningen</span> i dag</h3>
+      <div class="grid md:grid-cols-2 items-center">
+        <div>
+          <form action="" class="w-auto">
+            <!-- BELØB -->
+            Jeg vil gerne donerer
+            <select class="bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+              <option value="1" selected>et beløb</option>
+              <option value="2">50 kr</option>
+              <option value="3">100 kr</option>
+              <option value="4">200 kr</option>
+              <option value="2">300 kr</option>
+            </select>
+
+            <!-- GANGE -->
+            <select class="bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+              <option value="1" selected>antal gange</option>
+              <option value="2">en gang</option>
+              <option value="4">månedligt</option>
+              <option value="2">årligt</option>
+            </select>
+
+            <!-- BETALINGSFORM -->
+            med
+            <select class="bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+              <option value="1" selected>betalingsform</option>
+              <option value="2">mobilepay</option>
+              <option value="4">Dankort</option>
+              <option value="2">Kreditkort</option>
+            </select><br />
+
+            <!-- PERSON OPLYSNINGER -->
+            Jeg bor i
+            <input type="text" value="" placeholder="postnummer" class="w-auto bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+            og kan kontaktes på
+            <input type="number" value="" placeholder="tlf." class="w-auto bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+            eller
+            <input type="email" value="" placeholder="mail" class="w-auto bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" /><br />
+
+            <!-- SKAT + SAMTYKKE -->
+            Jeg ønsker
+            <select class="bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+              <option value="1" selected>fradrag fra SKAT</option>
+              <option value="2">Ja</option>
+              <option value="3">Nej</option>
+            </select>
+            , og giver mit
+            <select class="bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+              <option value="1" selected>samtykke</option>
+              <option value="2">Ja</option>
+              <option value="3">Nej</option>
+            </select>
+            til <a href="https://plasticchange.dk/privatlivspolitik/">Plastic Change</a><br />
+
+            Med venlig hilsen,
+            <input type="text" value="" placeholder="fornavn" class="bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+            <input type="text" value="" placeholder="efternavn" class="bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+          </form>
+        </div>
+        <div>
+          <img src="/img/new_hero.png" alt="" />
+        </div>
       </div>
     </article>
   </section>
