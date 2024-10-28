@@ -3,20 +3,21 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import hero from "../assets/images/new_hero.png";
 ---
 
 <MainLayout title="Titel">
-  <section id="hero" class="bg-blue">
-    <article class="grid justify-center text-center">
-      <h1 class="text-[65px] md:text-[100px] lg:text-[170px] font-display text-white z-10">SINGLE USE</h1>
+  <section id="hero" class="bg-blue grid grid-cols-3">
+    <img src="/img/new_hero.png" alt="" class="relative z-0 col-span-3" />
+    <article class="col-start-3 justify-center text-center absolute z-40">
+      <h1 class="text-[65px] md:text-[100px] lg:text-[170px] font-display text-white z-50">SINGLE USE</h1>
       <h1 class="text-[175px] md:text-[280px] lg:text-[430px] leading-[26px] md:leading-[55px] font-display text-pink pb-20 md:pb-32 lg:pb-48">SUCKS</h1>
       <h2 class="text-2xl md:text-3xl lg:text-5xl text-center font-rubik text-white px-8 md:px-44 pb-4">Vores verden kan ikke holde til mere unødvendig plastik.</h2>
       <Button>Støt os</Button>
     </article>
   </section>
   <section id="forurening" class="bg-blue text-white">
-    <article>
+    <article class="">
       <h3>Plastik: En fjende, der <span>ikke</span> forsvinder</h3>
       <p>Forureningen opstår blandt andet, når plastik ender i naturen. Her viser beregninger at det kan tage op til 500 år før det nedbrydes til mikroplastik. Man ved faktisk ikke om det forsvinder helt.</p>
     </article>
