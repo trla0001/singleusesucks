@@ -7,10 +7,27 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <article class="pt-64 bg-slate-300">
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p class="p-t-64">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
-  </article>
+  <section id="hero">
+    <article class="grid justify-center text-center">
+      <h1 class="text-[65px] lg:text-[170px]">SINGLE USE</h1>
+      <h1 class="text-[175px] lg:text-[450px] leading-[26px] pb-24">SUCKS</h1>
+      <h2 class="lg:text-6xl">Vores verden kan ikke holde til mere unødvendig plastik.</h2>
+      <Button>Støt os</Button>
+    </article>
+  </section>
+  <section id="forurening">
+    <article>
+      <h3>Plastik: En fjende, der <span>ikke</span> forsvinder</h3>
+      <p>Forureningen opstår blandt andet, når plastik ender i naturen. Her viser beregninger at det kan tage op til 500 år før det nedbrydes til mikroplastik. Man ved faktisk ikke om det forsvinder helt.</p>
+    </article>
+  </section>
+  <section id="støt">
+    <article>
+      <h3>Hjælp os med at <span>stoppe forureningen</span> i dag</h3>
+      <div>
+        <p>Jeg vil gerne donere et beløb antal gange med betalingsform. Jeg bor i postnummer, og kan kontaktes på tlf. eller email. Jeg ønsker fradrag fra SKAT, og giver mit samtykke til Plastic Change. Med venlig hilsen, fornavn efternavn</p>
+      </div>
+    </article>
+  </section>
+  <section id="merch?"></section>
 </MainLayout>
