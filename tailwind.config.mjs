@@ -11,6 +11,7 @@ export default {
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
+        display: ["Atkinson Hyperlegible", "sans-serif"],
       },
     },
   },
