@@ -13,7 +13,7 @@ import hero from "../assets/images/new_hero.png";
       <div class="col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.png" alt="" /></div>
       <div class="col-start-7 col-span-1 row-start-5 row-span-2 z-10"><img src="/img/bottle2.png" alt="" /></div>
       <div class="col-start-9 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bag3.png" alt="" /></div>
-      <div class="col-start-1 col-span-3 row-start-6 row-span-4 mt-8 z-10"><img src="/img/bag4.png" alt="" /></div>
+      <div class="animation col-start-1 col-span-3 row-start-6 row-span-4 mt-8 z-10"><img src="/img/bag4.png" alt="" /></div>
       <div class="col-start-3 col-span-2 row-start-7 row-span-2 z-10"><img src="/img/bottle5.png" alt="" /></div>
       <div class="col-start-9 col-span-3 row-start-7 row-span-3 mt-[-30px] z-10"><img src="/img/bag6.png" alt="" /></div>
       <div class="col-start-2 col-span-3 row-start-10 row-span-3 z-10"><img src="/img/bag7.png" alt="" /></div>
@@ -143,6 +143,17 @@ import hero from "../assets/images/new_hero.png";
     {
       target: document.querySelector(".crossfadeimages"),
       offset: ["-25vh", "25vh"],
+    }
+  );
+
+  /* Bevægelse af plastikpose i hero */
+  animate(
+    ".animation",
+    { y: [0, -20, 0] }, // op og ned
+    {
+      duration: 5, // Animationens varighed i sekunder
+      easing: "linear", // Blød overgang
+      repeat: Infinity, // Gentager uendeligt
     }
   );
 </script>
