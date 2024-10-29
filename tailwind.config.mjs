@@ -25,6 +25,11 @@ export default {
         p_m: "1rem",
         p_s: "0.9rem",
       },
+
+      spacing: {
+        160: "40rem", // This sets pt-160 to 40rem (which is 640px)
+        320: "80rem", // This sets pt-160 to 40rem (which is 640px)
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],

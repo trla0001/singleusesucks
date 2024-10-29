@@ -1,0 +1,26 @@
+---
+const { img, text, img2, text2, img3, text3 } = Astro.props;
+---
+
+<div class="grid grid-cols-3">
+  <div class="flex flex-col items-center">
+    <div class="flex-grow flex items-end">
+      <img src={img} alt="" />
+    </div>
+    <p class="text-h4_s md:text-h4_m lg:text-h4 text-center text-white mt-2">{text}</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <div class="flex-grow flex items-end">
+      <img src={img2} alt="" />
+    </div>
+    <p class="text-h4_s md:text-h4_m lg:text-h4 text-center text-white mt-2">{text2}</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <div class="flex-grow flex items-end">
+      <img src={img3} alt="" />
+    </div>
+    <p class="text-h4_s md:text-h4_m lg:text-h4 text-center text-white mt-2">{text3}</p>
+  </div>
+</div>
