@@ -115,9 +115,10 @@ import hero from "../assets/images/new_hero.png";
             <Button type="submit">Send donation</Button>
           </form>
         </div>
-        <div class="">
-          <img src="/img/seal.png" alt="" class="absolute z-10 w-[500px]" />
-          <img src="/img/isbjerg.png" alt="" class="relative z-0" />
+        <div class="parallaxani">
+          <!-- <img src="/img/seal.png" alt="" class="absolute z-10 w-[500px]" />
+          <img src="/img/isbjerg.png" alt="" class="relative z-0" /> -->
+          <img src="/img/seal2.png" alt="" class="parallaxani1" />
         </div>
       </div>
     </article>
@@ -194,4 +195,9 @@ import hero from "../assets/images/new_hero.png";
       repeat: Infinity, // Gentager uendeligt
     }
   );
+
+  scroll(animate(".parallaxani1", { y: [200, -300] }), {
+    target: document.querySelector(".parallaxani"),
+    offset: ["start end", "end start"],
+  });
 </script>
