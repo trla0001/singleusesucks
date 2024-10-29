@@ -29,7 +29,7 @@ import hero from "../assets/images/new_hero.png";
   </section>
 
   <section id="forurening" class="bg-blue text-white">
-    <div class="grid grid-cols-12">
+    <div class="grid grid-cols-12 parallaxgrafik">
       <div class="col-start-1 col-span-2 row-start-2 row-span-1 z-10"><img src="/img/bottle10.png" alt="" /></div>
       <div class="col-start-5 col-span-3 row-start-1 row-span-2 z-10"><img src="/img/bottle11.png" alt="" /></div>
       <div class="col-start-8 col-span-2 row-start-2 row-span-2 z-10"><img src="/img/bottle12.png" alt="" /></div>
@@ -40,7 +40,7 @@ import hero from "../assets/images/new_hero.png";
       <div class="col-start-10 col-span-3 row-start-4 row-span-2 mt-[-80px] z-10"><img src="/img/bottle17.png" alt="" /></div>
       <div class="col-start-8 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bottle18.png" alt="" /></div>
       <div class="col-start-11 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bottle19.png" alt="" /></div>
-      <div class="col-start-1 col-span-5 row-start-2 row-span-3 z-30"><img src="/img/turtle.png" alt="" /></div>
+      <div class="col-start-1 col-span-5 row-start-2 row-span-3 z-30 parallaxgrafik1"><img src="/img/turtle.png" alt="" /></div>
       <article class="grid justify-center col-span-12 z-30 mt-[-280px]">
         <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-white text-center">Plastik: En fjende, der <span class="text-pink">ikke</span> forsvinder</h3>
         <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">Forureningen opstår blandt andet, når plastik ender i naturen. Her viser beregninger at det kan tage op til <span class="font-bold">500 år</span> før det nedbrydes til mikroplastik. Man ved faktisk ikke om det forsvinder helt.</p>
@@ -122,3 +122,14 @@ import hero from "../assets/images/new_hero.png";
   </section>
   <section id="merch?"></section>
 </MainLayout>
+
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  /* Parallaxgrafik turtle */
+  scroll(animate(".parallaxgrafik1", { x: [100, 600] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+</script>
