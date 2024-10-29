@@ -8,103 +8,102 @@ import hero from "../assets/images/new_hero.png";
 
 <MainLayout title="Titel">
   <section id="hero" class="bg-blue">
-    <div class="sticky top-0 h-screen w-100 bg-cover bg-center" style="background-image: url('/hero_test.png');">
-      <!--  <article class="justify-center text-center pt-36 md:pt-32 lg:pt-20">
+    <div class="grid grid-cols-12 gap-5 auto-rows-[40px]">
+      <img src="/img/hero_test.png" alt="" class="z-0 col-span-12" />
+      <div class="col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.png" alt="" /></div>
+      <div class="col-start-7 col-span-1 row-start-5 row-span-2 z-10"><img src="/img/bottle2.png" alt="" /></div>
+      <div class="col-start-9 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bag3.png" alt="" /></div>
+      <div class="col-start-1 col-span-3 row-start-6 row-span-4 mt-8 z-10"><img src="/img/bag4.png" alt="" /></div>
+      <div class="col-start-3 col-span-2 row-start-7 row-span-2 z-10"><img src="/img/bottle5.png" alt="" /></div>
+      <div class="col-start-9 col-span-3 row-start-7 row-span-3 mt-[-30px] z-10"><img src="/img/bag6.png" alt="" /></div>
+      <div class="col-start-2 col-span-3 row-start-10 row-span-3 z-10"><img src="/img/bag7.png" alt="" /></div>
+      <div class="col-start-5 col-span-3 row-start-9 row-span-3 z-10"><img src="/img/bag8.png" alt="" /></div>
+      <div class="col-start-7 col-span-4 row-start-9 row-span-3 mt-[-20px] z-10"><img src="/img/bag9.png" alt="" /></div>
+      <article class="justify-center text-center pt-36 md:pt-32 lg:pt-20 col-span-12 z-20">
         <h1 class="text-[65px] md:text-[100px] lg:text-[160px] font-display text-white">SINGLE USE</h1>
         <h1 class="text-[170px] md:text-[280px] lg:text-[420px] leading-[26px] md:leading-[55px] font-display text-pink pb-20 md:pb-32 lg:pb-36">SUCKS</h1>
         <h2 class="text-2xl md:text-3xl lg:text-5xl text-center font-rubik text-white px-8 md:px-44 pb-4">Vores verden kan ikke holde til mere unødvendig plastik.</h2>
         <Button>Støt os</Button>
-      </article> -->
-      <div class="grid grid-cols-12 gap-5 auto-rows-[40px]">
-        <div class="col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4"><img src="/img/bag1.png" alt="" /></div>
-        <div class="col-start-7 col-span-1 row-start-5 row-span-2"><img src="/img/bottle2.png" alt="" /></div>
-        <div class="col-start-9 col-span-2 row-start-5 row-span-2"><img src="/img/bag3.png" alt="" /></div>
-        <div class="col-start-1 col-span-3 row-start-6 row-span-4 mt-8"><img src="/img/bag4.png" alt="" /></div>
-        <div class="col-start-3 col-span-2 row-start-7 row-span-2"><img src="/img/bottle5.png" alt="" /></div>
-        <div class="col-start-9 col-span-3 row-start-7 row-span-3 mt-[-30px]"><img src="/img/bag6.png" alt="" /></div>
-        <div class="col-start-2 col-span-3 row-start-10 row-span-3"><img src="/img/bag7.png" alt="" /></div>
-        <div class="col-start-5 col-span-3 row-start-9 row-span-3"><img src="/img/bag8.png" alt="" /></div>
-        <div class="col-start-7 col-span-4 row-start-9 row-span-3 mt-[-20px]"><img src="/img/bag9.png" alt="" /></div>
-      </div>
+      </article>
     </div>
   </section>
-  <section id="forurening" class="bg-blue text-white mt-32">
-    <article class="grid justify-center">
-      <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-white text-center">Plastik: En fjende, der <span class="text-pink">ikke</span> forsvinder</h3>
-      <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">Forureningen opstår blandt andet, når plastik ender i naturen. Her viser beregninger at det kan tage op til <span class="font-bold">500 år</span> før det nedbrydes til mikroplastik. Man ved faktisk ikke om det forsvinder helt.</p>
-      <img src="/img/pose.png" alt="" class="m-auto my-32" />
-      <img src="/img/pose_mikroplast.png" alt="" class="m-auto" />
-      <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">I havet er det solens UV-stråler der gør plastikken skrøbelig, og havets kræfter nedbryder den i millioner af små stykker.</p>
-    </article>
-  </section>
-  <section id="støt" class="my-32 text-blue">
-    <article>
-      <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-blue text-center mb-8">Hjælp os med at <span class="text-pink">stoppe forureningen</span> i dag</h3>
-      <div class="grid md:grid-cols-2 items-center">
-        <div class="ml-32">
-          <form action="" class="w-auto text-p_s md:text-p_m lg:text-p">
-            <!-- BELØB -->
-            Jeg vil gerne donerer
-            <select class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
-              <option value="1" selected>et beløb</option>
-              <option value="2">50 kr</option>
-              <option value="3">100 kr</option>
-              <option value="4">200 kr</option>
-              <option value="2">300 kr</option>
-            </select>
-
-            <!-- GANGE -->
-            <select class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
-              <option value="1" selected>antal gange</option>
-              <option value="2">en gang</option>
-              <option value="4">månedligt</option>
-              <option value="2">årligt</option>
-            </select>
-
-            <!-- BETALINGSFORM -->
-            med
-            <select class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
-              <option value="1" selected>betalingsform</option>
-              <option value="2">mobilepay</option>
-              <option value="4">Dankort</option>
-              <option value="2">Kreditkort</option>
-            </select><br />
-
-            <!-- PERSON OPLYSNINGER -->
-            Jeg bor i
-            <input type="text" value="" placeholder="postnummer" class="text-p_s md:text-p_m lg:text-p w-24 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
-            og kan kontaktes på
-            <input type="number" value="" placeholder="tlf." class="text-p_s md:text-p_m lg:text-p w-24 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
-            eller
-            <input type="email" value="" placeholder="mail" class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" /><br />
-
-            <!-- SKAT + SAMTYKKE -->
-            Jeg ønsker
-            <select class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
-              <option value="1" selected>fradrag fra SKAT</option>
-              <option value="2">Ja</option>
-              <option value="3">Nej</option>
-            </select>
-            , og giver mit
-            <select class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
-              <option value="1" selected>samtykke</option>
-              <option value="2">Ja</option>
-              <option value="3">Nej</option>
-            </select>
-            til <a href="https://plasticchange.dk/privatlivspolitik/">Plastic Change</a><br />
-
-            Med venlig hilsen,
-            <input type="text" value="" placeholder="fornavn" class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
-            <input type="text" value="" placeholder="efternavn" class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
-            <Button type="submit">Send donation</Button>
-          </form>
-        </div>
-        <div class="">
-          <img src="/img/seal.png" alt="" class="absolute z-10 w-[500px]" />
-          <img src="/img/isbjerg.png" alt="" class="relative z-0" />
-        </div>
-      </div>
-    </article>
-  </section>
-  <section id="merch?"></section>
 </MainLayout>
+<section id="forurening" class="bg-blue text-white mt-32">
+  <article class="grid justify-center">
+    <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-white text-center">Plastik: En fjende, der <span class="text-pink">ikke</span> forsvinder</h3>
+    <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">Forureningen opstår blandt andet, når plastik ender i naturen. Her viser beregninger at det kan tage op til <span class="font-bold">500 år</span> før det nedbrydes til mikroplastik. Man ved faktisk ikke om det forsvinder helt.</p>
+    <img src="/img/pose.png" alt="" class="m-auto my-32" />
+    <img src="/img/pose_mikroplast.png" alt="" class="m-auto" />
+    <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">I havet er det solens UV-stråler der gør plastikken skrøbelig, og havets kræfter nedbryder den i millioner af små stykker.</p>
+  </article>
+</section>
+<section id="støt" class="my-32 text-blue">
+  <article>
+    <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-blue text-center mb-8">Hjælp os med at <span class="text-pink">stoppe forureningen</span> i dag</h3>
+    <div class="grid md:grid-cols-2 items-center">
+      <div class="ml-32">
+        <form action="" class="w-auto text-p_s md:text-p_m lg:text-p">
+          <!-- BELØB -->
+          Jeg vil gerne donerer
+          <select class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+            <option value="1" selected>et beløb</option>
+            <option value="2">50 kr</option>
+            <option value="3">100 kr</option>
+            <option value="4">200 kr</option>
+            <option value="2">300 kr</option>
+          </select>
+
+          <!-- GANGE -->
+          <select class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+            <option value="1" selected>antal gange</option>
+            <option value="2">en gang</option>
+            <option value="4">månedligt</option>
+            <option value="2">årligt</option>
+          </select>
+
+          <!-- BETALINGSFORM -->
+          med
+          <select class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+            <option value="1" selected>betalingsform</option>
+            <option value="2">mobilepay</option>
+            <option value="4">Dankort</option>
+            <option value="2">Kreditkort</option>
+          </select><br />
+
+          <!-- PERSON OPLYSNINGER -->
+          Jeg bor i
+          <input type="text" value="" placeholder="postnummer" class="text-p_s md:text-p_m lg:text-p w-24 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+          og kan kontaktes på
+          <input type="number" value="" placeholder="tlf." class="text-p_s md:text-p_m lg:text-p w-24 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+          eller
+          <input type="email" value="" placeholder="mail" class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" /><br />
+
+          <!-- SKAT + SAMTYKKE -->
+          Jeg ønsker
+          <select class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+            <option value="1" selected>fradrag fra SKAT</option>
+            <option value="2">Ja</option>
+            <option value="3">Nej</option>
+          </select>
+          , og giver mit
+          <select class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink">
+            <option value="1" selected>samtykke</option>
+            <option value="2">Ja</option>
+            <option value="3">Nej</option>
+          </select>
+          til <a href="https://plasticchange.dk/privatlivspolitik/">Plastic Change</a><br />
+
+          Med venlig hilsen,
+          <input type="text" value="" placeholder="fornavn" class="text-p_s md:text-p_m lg:text-p bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+          <input type="text" value="" placeholder="efternavn" class="text-p_s md:text-p_m lg:text-p mb-4 md:mb-8 bg-none border-0 bg-transparent inline-block p-0 m-0 focus:ring-0 focus:border-pink cursor-pointer border-b-2 border-pink text-pink placeholder-pink" />
+          <Button type="submit">Send donation</Button>
+        </form>
+      </div>
+      <div class="">
+        <img src="/img/seal.png" alt="" class="absolute z-10 w-[500px]" />
+        <img src="/img/isbjerg.png" alt="" class="relative z-0" />
+      </div>
+    </div>
+  </article>
+</section>
+<section id="merch?"></section>
