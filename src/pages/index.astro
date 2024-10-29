@@ -10,15 +10,15 @@ import hero from "../assets/images/new_hero.png";
   <section id="hero" class="bg-blue">
     <div class="grid grid-cols-12 gap-5 auto-rows-[40px]">
       <img src="/img/hero_test.png" alt="" class="z-0 col-span-12" />
-      <div class="col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.png" alt="" /></div>
-      <div class="col-start-7 col-span-1 row-start-5 row-span-2 z-10"><img src="/img/bottle2.png" alt="" /></div>
-      <div class="col-start-9 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bag3.png" alt="" /></div>
-      <div class="animation col-start-1 col-span-3 row-start-6 row-span-4 mt-8 z-10"><img src="/img/bag4.png" alt="" /></div>
-      <div class="col-start-3 col-span-2 row-start-7 row-span-2 z-10"><img src="/img/bottle5.png" alt="" /></div>
-      <div class="col-start-9 col-span-3 row-start-7 row-span-3 mt-[-30px] z-10"><img src="/img/bag6.png" alt="" /></div>
-      <div class="col-start-2 col-span-3 row-start-10 row-span-3 z-10"><img src="/img/bag7.png" alt="" /></div>
-      <div class="col-start-5 col-span-3 row-start-9 row-span-3 z-10"><img src="/img/bag8.png" alt="" /></div>
-      <div class="col-start-7 col-span-4 row-start-9 row-span-3 mt-[-20px] z-10"><img src="/img/bag9.png" alt="" /></div>
+      <div class="hidden col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.png" alt="" /></div>
+      <div class="hidden col-start-7 col-span-1 row-start-5 row-span-2 z-10"><img src="/img/bottle2.png" alt="" /></div>
+      <div class="hidden col-start-9 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bag3.png" alt="" /></div>
+      <div class="up20-1 col-start-1 col-span-3 row-start-7 row-span-4 mt-20 z-10"><img src="/img/bag4.png" alt="" /></div>
+      <div class="hidden col-start-3 col-span-2 row-start-7 row-span-2 z-10"><img src="/img/bottle5.png" alt="" /></div>
+      <div class="up20-2 col-start-10 col-span-3 row-start-9 row-span-3 mt-[-30px] z-10"><img src="/img/bag6.png" alt="" /></div>
+      <div class="up10-1 col-start-2 col-span-3 row-start-12 row-span-3 z-10"><img src="/img/bag7.png" alt="" /></div>
+      <div class="up20-3 col-start-5 col-span-3 row-start-11 row-span-3 z-10"><img src="/img/bag8.png" alt="" /></div>
+      <div class="up10-2 col-start-7 col-span-4 row-start-11 row-span-3 mt-[-20px] z-10"><img src="/img/bag9.png" alt="" /></div>
       <article class="justify-center text-center pt-36 md:pt-32 lg:pt-3 col-span-12 z-20">
         <h1 class="relative z-30 text-[65px] md:text-[100px] lg:text-[140px] font-display text-white">SINGLE USE</h1>
         <h1 class="text-[170px] md:text-[280px] lg:text-[380px] leading-[26px] md:leading-[55px] font-display text-pink pb-20 md:pb-32 lg:pb-36">SUCKS</h1>
@@ -148,10 +148,48 @@ import hero from "../assets/images/new_hero.png";
 
   /* Bevægelse af plastikpose i hero */
   animate(
-    ".animation",
+    ".up20-1",
     { y: [0, -20, 0] }, // op og ned
     {
       duration: 5, // Animationens varighed i sekunder
+      easing: "linear", // Blød overgang
+      repeat: Infinity, // Gentager uendeligt
+    }
+  );
+  animate(
+    ".up20-2",
+    { y: [0, -20, 0] }, // op og ned
+    {
+      duration: 7, // Animationens varighed i sekunder
+      easing: "linear", // Blød overgang
+      repeat: Infinity, // Gentager uendeligt
+    }
+  );
+  animate(
+    ".up20-3",
+    { y: [0, -20, 0] }, // op og ned
+    {
+      duration: 6, // Animationens varighed i sekunder
+      easing: "linear", // Blød overgang
+      repeat: Infinity, // Gentager uendeligt
+    }
+  );
+
+  animate(
+    ".up10-1",
+    { y: [0, -10, 0] }, // op og ned
+    {
+      duration: 5, // Animationens varighed i sekunder
+      easing: "linear", // Blød overgang
+      repeat: Infinity, // Gentager uendeligt
+    }
+  );
+
+  animate(
+    ".up10-2",
+    { y: [0, -10, 0] }, // op og ned
+    {
+      duration: 4, // Animationens varighed i sekunder
       easing: "linear", // Blød overgang
       repeat: Infinity, // Gentager uendeligt
     }
