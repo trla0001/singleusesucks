@@ -115,8 +115,8 @@ import hero from "../assets/images/new_hero.png";
             <Button type="submit">Send donation</Button>
           </form>
         </div>
-        <div class="grid grid-rows-1 relative">
-          <div class="row-start-1 row-span-1"><img src="/img/seal.png" alt="" class="absolute z-10 w-[350px] inset-x-20 md:inset-x-36 bottom-24 lg:bottom-36" /></div>
+        <div class="grid grid-rows-1 relative parallaxseal">
+          <div class="row-start-1 row-span-1"><img src="/img/seal.png" alt="" class="absolute z-10 w-[350px] inset-x-20 md:inset-x-36 bottom-24 lg:bottom-36 parallaxseal1" /></div>
           <div class="row-start-1 row-span-1"><img src="/img/isbjerg.png" alt="" class="relative z-0" /></div>
         </div>
       </div>
@@ -129,8 +129,14 @@ import hero from "../assets/images/new_hero.png";
   import { animate, stagger, inView, scroll, timeline } from "motion";
 
   /* Parallaxgrafik turtle */
-  scroll(animate(".parallaxgrafik1", { x: [100, 600] }), {
+  scroll(animate(".parallaxgrafik1", { x: [-100, 900] }), {
     target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+
+  /* Parallaxgrafik sæl */
+  scroll(animate(".parallaxseal1", { x: [400, -20, 400] }), {
+    target: document.querySelector(".parallaxseal"),
     offset: ["start end", "end start"],
   });
 
