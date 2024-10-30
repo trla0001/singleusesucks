@@ -9,19 +9,6 @@
         <span class="ml-20 md:mr-0 text-h4_s md:text-h4_m lg:text-h4 text-blue font-bold">Fremtid</span>
       </div>
 
-      <div class="hidden md:block ml-16 md:ml-32 lg:ml-40 z-20 relative w-[70vw] h-[30vh] md:w-[60vw] md:h-[55vh] mx-auto p-8 border-l border-b border-blue bg-white">
-        <div class="grid grid-cols-3">
-          <div class="flex flex-col justify-end items-center">
-            <img src="/bottle1.svg" alt="Bottle 1" />
-          </div>
-          <div class="flex flex-col justify-end items-center">
-            <img src="/bottle2.svg" alt="Bottle 2" />
-          </div>
-          <div class="flex flex-col justify-end items-center">
-            <img src="/bottle3.svg" alt="Bottle 3" />
-          </div>
-        </div>
-      </div>
       <div class="md:hidden ml-16 md:ml-32 lg:ml-40 z-20 relative w-[70vw] h-[30vh] md:w-[60vw] md:h-[55vh] mx-auto p-8 border-l border-b border-blue bg-white">
         <div class="grid grid-cols-3">
           <div class="flex flex-col justify-end items-center">
@@ -37,24 +24,4 @@
       </div>
     </div>
   </section>
-
-  <section class="2">
-    <div id="divisor" class="z-30 absolute w-[90vw] h-[70vh] md:w-[70vw] md:h-[70vh] mx-auto bg-white flex items-center justify-center transition-all duration-200" style="width: 0;">
-      <img src="/graph_billede.webp" alt="" />
-    </div>
-  </section>
-
-  <input
-    id="slider"
-    type="range"
-    min="0"
-    max="100"
-    value="50"
-    class="z-40 absolute bottom-0 w-full -translate-y-1/2 opacity-70 transition-opacity duration-200 hover:opacity-100"
-    style="cursor: pointer; appearance: none; height: 30px; background-color: rgba(0, 9, 26, 1);"
-    oninput="document.getElementById('divisor').style.width = this.value + '%';"
-  />
-</div>
-<div class="slide_text absolute md:bottom-16 md:left-160 w-full flex items-center justify-between px-72 -mb-10">
-  <span class="mr-10 md:mr-0 text-h4_s md:text-h4_m lg:text-h4 text-pink font-bold">Slide</span>
 </div>
