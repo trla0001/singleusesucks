@@ -137,13 +137,25 @@ import hero from "../assets/images/new_hero.png";
   });
 
   /* Crossfade plastikpose */
+  // Fade out effect for crossfadebottomimg
   scroll(
     animate(".crossfadebottomimg", {
       opacity: [1, 0],
     }),
     {
       target: document.querySelector(".crossfadeimages"),
-      offset: ["-25vh", "25vh"],
+      offset: ["-20vh", "0vh"],
+    }
+  );
+
+  // Fade in effect for crossfadetopimg
+  scroll(
+    animate(".crossfadetopimg", {
+      opacity: [0, 1],
+    }),
+    {
+      target: document.querySelector(".crossfadeimages"),
+      offset: ["-20vh", "0vh"],
     }
   );
 
