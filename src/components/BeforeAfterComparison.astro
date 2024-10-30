@@ -1,0 +1,47 @@
+<div class="relative w-full h-screen max-w-5xl mx-auto overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full bg-pink flex items-center justify-center">
+    <h4 class="text-h4">Hvis vi ikke ændrer vores vaner</h4>
+  </div>
+
+  <div id="divisor" class="absolute top-0 left-0 h-full bg-blue flex items-center justify-center transition-all duration-200" style="width: 50%;">
+    <h4 class="text-h4 text-white">Fremtiden vi kæmper for</h4>
+  </div>
+
+  <input
+    id="slider"
+    type="range"
+    min="0"
+    max="100"
+    value="50"
+    class="absolute bottom-0 w-full -translate-y-1/2 opacity-70 transition-opacity duration-200 hover:opacity-100"
+    style="cursor: pointer; appearance: none; height: 10px; background-color: white;"
+    oninput="document.getElementById('divisor').style.width = this.value + '%';"
+  />
+</div>
+
+<!-- <div class="w-full h-160 max-w-5xl mx-auto overflow-hidden" id="before-after-container">
+  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-2xl font-bold" style="background-image: url('/text1.png');"></div>
+
+  <div id="divisor" class="absolute top-0 left-0 h-full flex items-center justify-center text-white text-2xl font-bold transition-all duration-200" style="width: 50%; background-image: url('/text2.png');"></div>
+</div> -->
+
+<!-- <script>
+  import { animate, stagger, inView, scroll, timeline, type OnScroll, type ScrollOptions, type ScrollInfo, ScrollOffset } from "motion";
+  window.addEventListener("scroll", () => {
+    const container = document.getElementById("before-after-container");
+    const divisor = document.getElementById("divisor");
+
+
+    const containerRect = container.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+
+    const inViewPercentage = Math.min(Math.max(((windowHeight - containerRect.top) / (windowHeight + containerRect.height)) * 100, 0), 100);
+
+
+    divisor.style.width = `${inViewPercentage}%`;
+  });
+
+  scroll(animate(".stickyparallax2", { y: [-300, 0] }), {
+    target: document.querySelector(".stickyparallax2"),
+  }); -->

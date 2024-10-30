@@ -8,6 +8,7 @@ import fisk from "../assets/images/fish_tail.webp";
 import thumbsup from "../assets/images/thumbsup.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BeforeAfterComparison from "../components/BeforeAfterComparison.astro";
 ---
 
 <MainLayout title="Titel">
@@ -74,7 +75,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     </section>
   </article> -->
   <div class="gradient"></div>
-  <article id="" class="sticky flex items-center justify-center" style=" top: 90%; transform: translateY(-50%);">
+  <article class="sticky flex items-center justify-center z-10" style=" top: 90%; transform: translateY(-50%);">
     <section class="text-left h-screen w-100 bg-cover bg-center">
       <h3 class="fadein_text stickyparallax1 text-h3_s md:text-h3_m lg:text-h3 mx-auto text-blue pl-4 lg:pl-0">
         <span class="text-pink">Plastik Change</span>:
@@ -92,106 +93,100 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     </section>
   </article>
 
-  <section class="grid grid-cols-2 bg-pink place-items-center">
-    <div>
-      <h4 class="text-h4 text-blue text-center">Hvis vi ikke ændrer vores vaner</h4>
-      <img src="/seabird1.webp" alt="" />
+  <article>
+    <div class="flex items-center justify-center min-h-screen bg-white z-20 relative">
+      <BeforeAfterComparison />
     </div>
-    <div>
-      <h4 class="text-h4 text-blue text-center">Fremtiden vi kæmper for</h4>
-      <img src="/seabird1.webp" alt="" />
-    </div>
-  </section>
-
-  <!-- <section><img src="/microplast.webp" alt="" /></section> -->
-  <style>
-    .delay {
-      animation-delay: 1s;
-      animation-duration: 2s;
-    }
-    .delay-1 {
-      animation-delay: 2s;
-      animation-duration: 2s;
-    }
-    .delay-2 {
-      animation-delay: 2.5s;
-      animation-duration: 2s;
-    }
-    .delay-3 {
-      animation-delay: 3s;
-      animation-duration: 2s;
-    }
-  </style>
-
-  <script>
-    import { animate, stagger, inView, scroll, timeline, type OnScroll, type ScrollOptions, type ScrollInfo, ScrollOffset } from "motion";
-    // function scrollCallback(info: ScrollInfo) {
-    //   if (info.y.progress < 0.5) {
-    //     animate(".parallaxgrafik3", {
-    //       x: [1000, -1000],
-    //       y: [-300, 600],
-    //     });
-    //   }
-    // }
-
-    // scroll((info) => scrollCallback(info), {
-    //   target: document.querySelector(".parallaxgrafik"),
-    //   offset: ["start end", "end start"],
-    // });
-
-    scroll(
-      timeline(
-        [
-          [".parallaxgrafik3", { x: [1500, -300], y: [-150, 250] }, { at: 2.5, duration: 2.5 }], // start 25% into scrolling and lasts 25%
-          [".tailgrid", { x: [1500, -300], y: [-150, 250] }, { at: 2.5, duration: 2.5 }],
-          // [".tail", { x: [2000, 200], y: [-125, 275] }, { at: 2.5, duration: 2.5 }],
-          [".parallaxgrafik3", { rotate: 180, y: [250, 400] }, { at: 5.0, duration: 1.0 }],
-          [".tailwindgrid", { rotate: 180, y: [250, 400] }, { at: 5.0, duration: 1.0 }],
-          // [".tail", { opacity: [1, 0] }, { at: 5, duration: 1.0 }],
-          [".parallaxgrafik3", { y: [400, 630] }, { duration: 2.0 }], // start at 5+1 =6
-          [".parallaxgrafik3", { y: [400, 630] }, { duration: 2.0 }],
-        ],
-        { duration: 1.0 }
-      ),
-      {
-        target: document.querySelector(".parallaxgrafik"),
-        offset: ["start end", "end start"],
-      }
-    );
-
-    // scroll(
-    //   animate(".parallaxgrafik3", {
-    //     x: [1000, -1000],
-    //     y: [-300, 600],
-    //   }),
-    //   {
-    //     target: document.querySelector(".parallaxgrafik"),
-    //     offset: ["start end", "end start"],
-    //   }
-    // );
-
-    const inviewelementet = document.querySelector(".fadein_text");
-    inView(inviewelementet, () => {
-      inviewelementet.classList.add("animate__animated", "animate__fadeInLeft", "delay");
-    });
-
-    const inviewelementet1 = document.querySelector(".fadein_text1");
-    inView(inviewelementet1, () => {
-      inviewelementet1.classList.add("animate__animated", "animate__fadeInLeft", "delay-1");
-    });
-
-    const inviewelementet2 = document.querySelector(".fadein_text2");
-    inView(inviewelementet2, () => {
-      inviewelementet2.classList.add("animate__animated", "animate__fadeInLeft", "delay-2");
-    });
-
-    const inviewelementet3 = document.querySelector(".fadein_text3");
-    inView(inviewelementet3, () => {
-      inviewelementet3.classList.add("animate__animated", "animate__fadeInLeft", "delay-3");
-    });
-
-    scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
-      target: document.querySelector(".stickyparallax1"),
-    });
-  </script>
+    <img src="microplast2.webp" alt="" />
+  </article>
 </MainLayout>
+<style>
+  .delay {
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  .delay-1 {
+    animation-delay: 2s;
+    animation-duration: 2s;
+  }
+  .delay-2 {
+    animation-delay: 2.5s;
+    animation-duration: 2s;
+  }
+  .delay-3 {
+    animation-delay: 3s;
+    animation-duration: 2s;
+  }
+</style>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline, type OnScroll, type ScrollOptions, type ScrollInfo, ScrollOffset } from "motion";
+  // function scrollCallback(info: ScrollInfo) {
+  //   if (info.y.progress < 0.5) {
+  //     animate(".parallaxgrafik3", {
+  //       x: [1000, -1000],
+  //       y: [-300, 600],
+  //     });
+  //   }
+  // }
+
+  // scroll((info) => scrollCallback(info), {
+  //   target: document.querySelector(".parallaxgrafik"),
+  //   offset: ["start end", "end start"],
+  // });
+
+  scroll(
+    timeline(
+      [
+        [".parallaxgrafik3", { x: [1500, -300], y: [-150, 250] }, { at: 2.5, duration: 2.5 }], // start 25% into scrolling and lasts 25%
+        [".tailgrid", { x: [1500, -300], y: [-150, 250] }, { at: 2.5, duration: 2.5 }],
+        // [".tail", { x: [2000, 200], y: [-125, 275] }, { at: 2.5, duration: 2.5 }],
+        [".parallaxgrafik3", { rotate: 180, y: [250, 400] }, { at: 5.0, duration: 1.0 }],
+        [".tailwindgrid", { rotate: 180, y: [250, 400] }, { at: 5.0, duration: 1.0 }],
+        // [".tail", { opacity: [1, 0] }, { at: 5, duration: 1.0 }],
+        [".parallaxgrafik3", { y: [400, 630] }, { duration: 2.0 }], // start at 5+1 =6
+        [".parallaxgrafik3", { y: [400, 630] }, { duration: 2.0 }],
+      ],
+      { duration: 1.0 }
+    ),
+    {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    }
+  );
+
+  // scroll(
+  //   animate(".parallaxgrafik3", {
+  //     x: [1000, -1000],
+  //     y: [-300, 600],
+  //   }),
+  //   {
+  //     target: document.querySelector(".parallaxgrafik"),
+  //     offset: ["start end", "end start"],
+  //   }
+  // );
+
+  const inviewelementet = document.querySelector(".fadein_text");
+  inView(inviewelementet, () => {
+    inviewelementet.classList.add("animate__animated", "animate__fadeInLeft", "delay");
+  });
+
+  const inviewelementet1 = document.querySelector(".fadein_text1");
+  inView(inviewelementet1, () => {
+    inviewelementet1.classList.add("animate__animated", "animate__fadeInLeft", "delay-1");
+  });
+
+  const inviewelementet2 = document.querySelector(".fadein_text2");
+  inView(inviewelementet2, () => {
+    inviewelementet2.classList.add("animate__animated", "animate__fadeInLeft", "delay-2");
+  });
+
+  const inviewelementet3 = document.querySelector(".fadein_text3");
+  inView(inviewelementet3, () => {
+    inviewelementet3.classList.add("animate__animated", "animate__fadeInLeft", "delay-3");
+  });
+
+  scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
+    target: document.querySelector(".stickyparallax1"),
+  });
+</script>
