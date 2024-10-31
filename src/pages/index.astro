@@ -94,10 +94,10 @@ import Graphtwo from "../components/Graphtwo.astro";
 
   <section id="change" class="mb-32">
     <div class="flex flex-row items-center justify-center h-screen w-100 bg-cover bg-center sticky top-0">
-      <div class="stickyparallax3">
+      <div class="fadein_text">
         <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-pink text-center">Plastik Change:</h3>
-        <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-blue text-center">En fremtid med <span class="text-pink">mindre plastik</span></h3>
-        <p class="text-p_s md:text-p_m lg:text-p text-blue max-w-4xl mx-auto text-left pb-8">Plastic Change arbejder mod en fremtid med mindre plastikforbrug ved at påvirke politiske beslutninger og fremme innovative løsninger i kampen mod plastikforurening.</p>
+        <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-blue text-center pb-8">En fremtid med <span class="text-pink">mindre plastik</span></h3>
+        <p class="text-p_s md:text-p_m lg:text-p text-blue max-w-4xl mx-auto text-left pb-4">Plastic Change arbejder mod en fremtid med mindre plastikforbrug ved at påvirke politiske beslutninger og fremme innovative løsninger i kampen mod plastikforurening.</p>
         <p class="text-p_s md:text-p_m lg:text-p text-blue max-w-4xl mx-auto text-left">Målet er at beskytte miljøet og fremtidens generationer, og med din støtte kan vi fortsætte kampen.</p>
       </div>
     </div>
@@ -183,57 +183,30 @@ import Graphtwo from "../components/Graphtwo.astro";
   </section>
 </MainLayout>
 
+<style>
+  .delay {
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  .delay-1 {
+    animation-delay: 2s;
+    animation-duration: 2s;
+  }
+  .delay-2 {
+    animation-delay: 2.5s;
+    animation-duration: 2s;
+  }
+  .delay-3 {
+    animation-delay: 3s;
+    animation-duration: 2s;
+  }
+</style>
+
 <script>
-  /* Import af Motion One biblioteket */
+  /*************** Import af Motion One biblioteket ***************/
   import { animate, stagger, inView, scroll, timeline } from "motion";
 
-  /* Parallaxgrafik turtle */
-  scroll(animate(".parallaxgrafik1", { x: [-100, 900] }), {
-    target: document.querySelector(".parallaxgrafik"),
-    offset: ["start end", "end start"],
-  });
-
-  /* Parallaxgrafik sæl */
-  scroll(animate(".parallaxseal1", { x: [400, -30, 400] }), {
-    target: document.querySelector(".parallaxseal"),
-    offset: ["start end", "end start"],
-  });
-
-  /* Crossfade plastikpose */
-  // Fade out effect for crossfadebottomimg
-  scroll(
-    animate(".crossfadebottomimg", {
-      opacity: [1, 0],
-    }),
-    {
-      target: document.querySelector(".crossfadeimages"),
-      offset: ["-20vh", "0vh"],
-    }
-  );
-
-  // Fade in effect for crossfadetopimg
-  scroll(
-    animate(".crossfadetopimg", {
-      opacity: [0, 1],
-    }),
-    {
-      target: document.querySelector(".crossfadeimages"),
-      offset: ["-20vh", "0vh"],
-    }
-  );
-
-  /* Zoom mikroplastikpose */
-  scroll(
-    animate(".scrollzoomimg", {
-      scale: [1, 1.3],
-    }),
-    {
-      target: document.querySelector(".scrollzoom"),
-      offset: ["0.75 end", "end end"],
-    }
-  );
-
-  /* Bevægelse af plastikpose i hero */
+  /************************** Bevægelse af plastikpose i hero **************************/
   animate(
     ".up20-1",
     { y: [0, -20, 0] }, // op og ned
@@ -281,26 +254,59 @@ import Graphtwo from "../components/Graphtwo.astro";
       repeat: Infinity, // Gentager uendeligt
     }
   );
-</script>
 
-<style>
-  .delay {
-    animation-delay: 1s;
-    animation-duration: 2s;
-  }
-  .delay-1 {
-    animation-delay: 2s;
-    animation-duration: 2s;
-  }
-  .delay-2 {
-    animation-delay: 2.5s;
-    animation-duration: 2s;
-  }
-  .delay-3 {
-    animation-delay: 3s;
-    animation-duration: 2s;
-  }
-</style>
+  /****************** Parallaxgrafik turtle ******************/
+  scroll(animate(".parallaxgrafik1", { x: [-100, 900] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+
+  /******************* Crossfade plastikpose *******************/
+  // Fade out effect for crossfadebottomimg
+  scroll(
+    animate(".crossfadebottomimg", {
+      opacity: [1, 0],
+    }),
+    {
+      target: document.querySelector(".crossfadeimages"),
+      offset: ["-20vh", "0vh"],
+    }
+  );
+
+  // Fade in effect for crossfadetopimg
+  scroll(
+    animate(".crossfadetopimg", {
+      opacity: [0, 1],
+    }),
+    {
+      target: document.querySelector(".crossfadeimages"),
+      offset: ["-20vh", "0vh"],
+    }
+  );
+
+  /* Zoom mikroplastikpose */
+  scroll(
+    animate(".scrollzoomimg", {
+      scale: [1, 1.3],
+    }),
+    {
+      target: document.querySelector(".scrollzoom"),
+      offset: ["0.75 end", "end end"],
+    }
+  );
+
+  /******************* Fade in animation til text *******************/
+  const inviewelementet = document.querySelector(".fadein_text");
+  inView(inviewelementet, () => {
+    inviewelementet.classList.add("animate__animated", "animate__fadeInLeft", "delay");
+  });
+
+  /******************* Parallaxgrafik sæl *******************/
+  scroll(animate(".parallaxseal1", { x: [400, -30, 400] }), {
+    target: document.querySelector(".parallaxseal"),
+    offset: ["start end", "end start"],
+  });
+</script>
 
 <script>
   import { animate, stagger, inView, scroll, timeline, type OnScroll, type ScrollOptions, type ScrollInfo, ScrollOffset } from "motion";
@@ -324,11 +330,6 @@ import Graphtwo from "../components/Graphtwo.astro";
       offset: ["start end", "end start"],
     }
   );
-
-  const inviewelementet = document.querySelector(".fadein_text");
-  inView(inviewelementet, () => {
-    inviewelementet.classList.add("animate__animated", "animate__fadeInLeft", "delay");
-  });
 
   const inviewelementet1 = document.querySelector(".fadein_text1");
   inView(inviewelementet1, () => {
