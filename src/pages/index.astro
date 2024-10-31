@@ -7,7 +7,8 @@ import hero from "../assets/images/new_hero.png";
 ---
 
 <MainLayout title="Titel">
-  <section id="hero" class="bg-blue parallaxbutton">
+  <div class="sticky z-50 top-3 col-span-12 p-8"><a href="/#"><img src="logo.webp" alt="" /></a></div>
+  <section id="hero" class="bg-blue mt-[-120px]">
     <div class="grid grid-cols-12 gap-5 auto-rows-[40px]">
       <img src="/img/hero_test.png" alt="" class="z-0 col-span-12" />
       <div class="hidden col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.png" alt="" /></div>
@@ -23,7 +24,7 @@ import hero from "../assets/images/new_hero.png";
         <h1 class="relative z-30 text-[50px] md:text-[100px] lg:text-[140px] font-display text-white">SINGLE USE</h1>
         <h1 class="text-[150px] md:text-[280px] lg:text-[380px] leading-[26px] md:leading-[55px] font-display text-pink pb-20 md:pb-32 lg:pb-36">SUCKS</h1>
         <h2 class="text-2xl md:text-3xl lg:text-5xl text-center font-rubik text-white px-8 md:px-44 pb-2">Vores verden kan ikke holde til mere unødvendig plastik.</h2>
-        <div class="parallaxbutton1"><Button>Støt os</Button></div>
+        <Button>Støt os</Button>
       </article>
     </div>
   </section>
@@ -137,12 +138,6 @@ import hero from "../assets/images/new_hero.png";
   /* Parallaxgrafik sæl */
   scroll(animate(".parallaxseal1", { x: [400, -30, 400] }), {
     target: document.querySelector(".parallaxseal"),
-    offset: ["start end", "end start"],
-  });
-
-  /* Parallaxgrafik button */
-  scroll(animate(".parallaxbutton1", { y: [160, -200], x: [-500, 700] }), {
-    target: document.querySelector(".parallaxbutton"),
     offset: ["start end", "end start"],
   });
 
