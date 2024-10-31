@@ -12,24 +12,24 @@ import Graphtwo from "../components/Graphtwo.astro";
 ---
 
 <MainLayout title="Single Use Sucks" description="En hjemmesider der handler om plastikforurening" og:title="Single Use Sucks" og:description="Dette er en hjemmesside lavet af Plastic Change, og omhandler plastikforurening">
-  <div class="sticky z-50 top-6 px-8 col-span-12"><a href="/#"><img src="logo.webp" alt="" /></a></div>
+  <div class="sticky z-50 top-6 px-8 col-span-12"><a href="/index"><img src="logo.webp" alt="Plastic Change logo" /></a></div>
   <section id="hero" class="bg-blue mt-[-80px]">
     <div class="grid grid-cols-12 gap-5 auto-rows-[40px] max-w-7xl mx-auto">
-      <img src="/img/hero_test.png" alt="" class="z-0 col-span-12" />
-      <div class="hidden col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.png" alt="" /></div>
-      <div class="hidden col-start-7 col-span-1 row-start-5 row-span-2 z-10"><img src="/img/bottle2.png" alt="" /></div>
-      <div class="hidden col-start-9 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bag3.png" alt="" /></div>
-      <div class="up20-1 col-start-1 col-span-3 row-start-4 md:row-start-5 lg:row-start-7 row-span-4 mt-20 z-20"><img src="/img/bag4.png" alt="" /></div>
-      <div class="hidden col-start-3 col-span-2 row-start-7 row-span-2 z-10"><img src="/img/bottle5.png" alt="" /></div>
-      <div class="up20-2 col-start-10 col-span-3 row-start-6 md:row-start-7 lg:row-start-9 row-span-3 mt-[-30px] z-10"><img src="/img/bag6.png" alt="" /></div>
-      <div class="up10-1 col-start-2 col-span-3 row-start-7 md:row-start-9 lg:row-start-12 row-span-3 z-10"><img src="/img/bag7.png" alt="" /></div>
-      <div class="up20-3 col-start-5 col-span-3 row-start-7 md:row-start-9 lg:row-start-11 row-span-3 z-10"><img src="/img/bag8.png" alt="" /></div>
-      <div class="up10-2 col-start-7 col-span-4 row-start-7 md:row-start-9 lg:row-start-11 row-span-3 mt-[-20px] z-10"><img src="/img/bag9.png" alt="" /></div>
+      <img src="/img/hero.webp" alt="Baggrunds billede til hero sektion" class="z-0 col-span-12" />
+      <div class="hidden col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.webp" alt="billede af plastikpose" /></div>
+      <div class="hidden col-start-7 col-span-1 row-start-5 row-span-2 z-10"><img src="/img/bottle2.webp" alt="billede af plastikflaske" /></div>
+      <div class="hidden col-start-9 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bag3.webp" alt="billede af en anden plastikpose" /></div>
+      <div class="up20-1 col-start-1 col-span-3 row-start-4 md:row-start-5 lg:row-start-7 row-span-4 mt-20 z-20"><img src="/img/bag4.webp" alt="billede af en tredje plastikpose" /></div>
+      <div class="hidden col-start-3 col-span-2 row-start-7 row-span-2 z-10"><img src="/img/bottle5.webp" alt="billede af en anden plastikflaske" /></div>
+      <div class="up20-2 col-start-10 col-span-3 row-start-6 md:row-start-7 lg:row-start-9 row-span-3 mt-[-30px] z-10"><img src="/img/bag6.webp" alt="billede af en fjerde plastikpose" /></div>
+      <div class="up10-1 col-start-2 col-span-3 row-start-7 md:row-start-9 lg:row-start-12 row-span-3 z-10"><img src="/img/bag7.webp" alt="billede af en femte plastikpose" /></div>
+      <div class="up20-3 col-start-5 col-span-3 row-start-7 md:row-start-9 lg:row-start-11 row-span-3 z-10"><img src="/img/bag8.webp" alt="billede af en sjete plastikpose" /></div>
+      <div class="up10-2 col-start-7 col-span-4 row-start-7 md:row-start-9 lg:row-start-11 row-span-3 mt-[-20px] z-10"><img src="/img/bag9.webp" alt="billede af en syvende plastikpose" /></div>
       <article class="justify-center text-center mt-[-30px] lg:mt-3 col-span-12 z-20">
         <h1 class="relative z-30 text-[50px] md:text-[100px] lg:text-[140px] font-display text-white">SINGLE USE</h1>
         <h1 class="text-[150px] md:text-[280px] lg:text-[380px] leading-[26px] md:leading-[55px] font-display text-pink pb-20 md:pb-32 lg:pb-36">SUCKS</h1>
         <h2 class="text-2xl md:text-3xl lg:text-5xl text-center font-rubik text-white px-8 md:px-44 pb-2">Vores verden kan ikke holde til mere unødvendig plastik.</h2>
-        <Button>Støt os</Button>
+        <a href="#støt" target="_self"><Button>Støt os</Button></a>
       </article>
     </div>
   </section>
@@ -37,25 +37,25 @@ import Graphtwo from "../components/Graphtwo.astro";
   <!-------------------------------------------- FORURENING SEKTION -------------------------------------------->
   <section id="forurening" class="bg-blue text-white">
     <div class="grid grid-cols-12 parallaxgrafik max-w-7xl mx-auto">
-      <div class="col-start-1 col-span-2 row-start-2 row-span-1 mt-[-100px] lg:mt-0 z-10"><img src="/img/bottle10.png" alt="" /></div>
-      <div class="col-start-5 col-span-3 row-start-1 row-span-2 mt-[-100px] lg:mt-0 z-10"><img src="/img/bottle11.png" alt="" /></div>
-      <div class="col-start-8 col-span-2 row-start-2 row-span-2 z-10"><img src="/img/bottle12.png" alt="" /></div>
-      <div class="col-start-10 col-span-3 row-start-1 row-span-3 mt-[-100px] lg:mt-0 z-10"><img src="/img/bag13.png" alt="" /></div>
-      <div class="col-start-2 col-span-3 row-start-3 row-span-2 z-10"><img src="/img/bottle14.png" alt="" /></div>
-      <div class="col-start-3 col-span-5 row-start-4 row-span-5 z-10"><img src="/img/bottle15.png" alt="" /></div>
-      <div class="col-start-7 col-span-2 row-start-3 row-span-2 z-10"><img src="/img/bottle16.png" alt="" /></div>
-      <div class="col-start-10 col-span-3 row-start-4 row-span-2 mt-[-80px] z-10"><img src="/img/bottle17.png" alt="" /></div>
-      <div class="col-start-8 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bottle18.png" alt="" /></div>
-      <div class="col-start-11 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bottle19.png" alt="" /></div>
-      <div class="col-start-1 col-span-5 row-start-2 row-span-3 z-30 parallaxgrafik1"><img src="/img/turtle.png" alt="" /></div>
+      <div class="col-start-1 col-span-2 row-start-2 row-span-1 mt-[-100px] lg:mt-0 z-10"><img src="/img/bottle10.webp" alt="Billede af en tredje plastikflaske" /></div>
+      <div class="col-start-5 col-span-3 row-start-1 row-span-2 mt-[-100px] lg:mt-0 z-10"><img src="/img/bottle11.webp" alt="Billede af en fjerde plastikflaske" /></div>
+      <div class="col-start-8 col-span-2 row-start-2 row-span-2 z-10"><img src="/img/bottle12.webp" alt="Billede af en femte plastikflaske" /></div>
+      <div class="col-start-10 col-span-3 row-start-1 row-span-3 mt-[-100px] lg:mt-0 z-10"><img src="/img/bag13.webp" alt="Billede af en ottende plastikpose" /></div>
+      <div class="col-start-2 col-span-3 row-start-3 row-span-2 z-10"><img src="/img/bottle14.webp" alt="Billede af en sjette plastikflaske" /></div>
+      <div class="col-start-3 col-span-5 row-start-4 row-span-5 z-10"><img src="/img/bottle15.webp" alt="Billede af en syvende plastikflaske" /></div>
+      <div class="col-start-7 col-span-2 row-start-3 row-span-2 z-10"><img src="/img/bottle16.webp" alt="Billede af en ottende plastikflaske" /></div>
+      <div class="col-start-10 col-span-3 row-start-4 row-span-2 mt-[-80px] z-10"><img src="/img/bottle17.webp" alt="Billede af en niende plastikflaske" /></div>
+      <div class="col-start-8 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bottle18.webp" alt="Billede af en tiende plastikflaske" /></div>
+      <div class="col-start-11 col-span-2 row-start-5 row-span-2 z-10"><img src="/img/bottle19.webp" alt="Billede af plastikflaske nummer elve" /></div>
+      <div class="col-start-1 col-span-5 row-start-2 row-span-3 z-30 parallaxgrafik1"><img src="/img/turtle.webp" alt="Billede af en skildpadde" /></div>
       <article class="grid justify-center col-span-12 z-30 mt-[-100px] lg:mt-[-280px]">
         <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-white text-center">Plastik: En fjende, der <span class="text-pink">ikke</span> forsvinder</h3>
         <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">
           Forureningen opstår blandt andet, når plastik ender i naturen. Her viser beregninger at det kan tage op til <span class="font-bold">500 år</span> før det nedbrydes til mikroplastik. Man ved faktisk ikke om det forsvinder helt.
         </p>
         <article class="crossfadeimages scrollzoom mx-auto relative h-screen lg:w-screen my-20 flex items-center justify-center">
-          <img src="/img/pose_mikroplast.webp" alt="" class="crossfadetopimg scrollzoomimg object-cover h-screen absolute top-0 z-0 my-0" />
-          <img src="/img/pose.webp" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0 -rotate-90" />
+          <img src="/img/pose_mikroplast.webp" alt="Billede af en plastik pose opløst til mikroplastik" class="crossfadetopimg scrollzoomimg object-cover h-screen absolute top-0 z-0 my-0" />
+          <img src="/img/pose.webp" alt="Billede af en gammel plastikpose" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0 -rotate-90" />
         </article>
         <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">I havet er det solens UV-stråler der gør plastikken skrøbelig, og havets kræfter nedbryder den i millioner af små stykker.</p>
       </article>
@@ -75,7 +75,7 @@ import Graphtwo from "../components/Graphtwo.astro";
     <article class="parallaxgrafikfisk fullwidthsection">
       <div class="top-0 h-screen w-full bg-cover bg-center grid grid-cols-12 row-span-6 overflow-hidden" style="background-image: url('/microplast.webp');">
         <div class="tailgrid col-start-5 col-span-12 row-start-1 row-span-1 bg-gradient-to-r from-blue to-transparent h-28 mt-8 ml-24"></div>
-        <img src="/fish_no_tail.webp" alt="" class="col-start-4 col-span-3 row-start-1 row-span-1 parallaxgrafik3" />
+        <img src="/fish_no_tail.webp" alt="Billede af en fisk" class="col-start-4 col-span-3 row-start-1 row-span-1 parallaxgrafik3" />
       </div>
     </article>
     <article class="grid grid-cols-5 grid-rows-4">
@@ -171,8 +171,8 @@ import Graphtwo from "../components/Graphtwo.astro";
           </form>
         </div>
         <div class="grid grid-rows-1 relative parallaxseal">
-          <div class="row-start-1 row-span-1"><img src="/img/seal.png" alt="" class="absolute z-10 w-[350px] inset-x-20 md:inset-x-36 bottom-24 lg:bottom-36 parallaxseal1" /></div>
-          <div class="row-start-1 row-span-1"><img src="/img/isbjerg.png" alt="" class="relative z-0" /></div>
+          <div class="row-start-1 row-span-1"><img src="/img/seal.webp" alt="Billede af en sæl" class="absolute z-10 w-[350px] inset-x-20 md:inset-x-36 bottom-24 lg:bottom-36 parallaxseal1" /></div>
+          <div class="row-start-1 row-span-1"><img src="/img/ice.webp" alt="Billede af et isbjerg" class="relative z-0" /></div>
         </div>
       </div>
     </article>
