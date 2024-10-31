@@ -22,9 +22,18 @@ export default {
         h4_m: "1.4rem",
         h4_s: "1.2rem",
 
+        gr: "2.5rem",
+        gr_m: "1.8rem",
+        gr_s: "1.4rem",
+
         p: "1.3rem",
         p_m: "1rem",
         p_s: "0.9rem",
+      },
+
+      spacing: {
+        160: "40rem", // This sets pt-160 to 40rem (which is 640px)
+        320: "80rem", // This sets pt-160 to 40rem (which is 640px)
       },
     },
   },

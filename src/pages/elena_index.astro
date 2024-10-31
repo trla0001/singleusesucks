@@ -2,11 +2,22 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import ThreeImages from "../components/ThreeImages.astro";
 import { Image } from "astro:assets";
+import fisk from "../assets/images/fish_tail.webp";
 import thumbsup from "../assets/images/thumbsup.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BeforeAfterComparison from "../components/BeforeAfterComparison.astro";
+import Graphs from "../components/Graphs.astro";
+import Graphtwo from "../components/Graphtwo.astro";
 ---
 
 <MainLayout title="Titel">
+  <div class="pt-124">
+    <img src="/microplast.webp" alt="microplastic_background" />
+  </div>
+
   <article class="flex items-center justify-center pt-64 bg-blue">
     <section class="text-center">
       <h3 class="text-h3_s md:text-h3_m lg:text-h3 mx-auto text-white">
@@ -19,13 +30,257 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
     </section>
   </article>
-  <img src="/hero_test.png" alt="" />
 
-  <article class="flex items-center justify-center bg-blue">
-    <section class="text-center">
-      <div class="flex items-center justify-center max-w-4xl pt-8 pl-4 lg:pl-10">
-        <p class="text-p_s md:text-p_m lg:text-p mx-auto text-white text-left">Når fisk indtager plastik, overføres skadelige kemikalier fra plastikken til deres væv, og når vi spiser fisken, kan disse kemikalier overføres til os.</p>
+  <!-- <section class="parallaxgrafik fullwidthsection">
+    <div class="h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden" style="background-image: url('/microplast.webp');">
+      <div class="tail bg-gradient-to-r from-blue to-transparent"></div>
+      <img src="/fish_no_tail.webp" alt="" class="col-start-4 col-span-3 parallaxgrafik3" />
+    </div>
+  </section> -->
+
+  <section class="parallaxgrafik fullwidthsection">
+    <div class="top-0 h-screen w-full bg-cover bg-center grid grid-cols-12 row-span-6 overflow-hidden" style="background-image: url('/microplast.webp');">
+      <div class="tailgrid col-start-5 col-span-12 row-start-1 row-span-1 bg-gradient-to-r from-blue to-transparent h-28 mt-8 ml-24"></div>
+      <img src="/fish_no_tail.webp" alt="" class="col-start-4 col-span-3 row-start-1 row-span-1 parallaxgrafik3" />
+    </div>
+  </section>
+
+  <section class="grid grid-cols-5 grid-rows-4">
+    <div class="h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden col-start-1 col-span-5 row-start-1 row-span-4" style="background-image: url('/microplast2.webp');"></div>
+    <p class="text-p_s md:text-p_m lg:text-p mx-auto text-white text-left col-start-1 col-span-5 lg:col-start-2 lg:col-span-3 row-start-2 row-span-1 pl-6 lg:pl-10">
+      Når fisk indtager plastik, overføres skadelige kemikalier fra plastikken til deres væv, og når vi spiser fisken, kan disse kemikalier overføres til os.
+    </p>
+    <p class="text-p_s md:text-p_m lg:text-p mx-auto text-white text-left col-start-1 col-span-5 lg:col-start-2 lg:col-span-3 row-start-3 row-span-1 pl-6 lg:pl-10">
+      Det kan få alvorlige sundhedskonsekvenser for mennesker. Plastikforureningen risikerer at påvirke hele fødekæden og økosystemet i fremtiden.
+    </p>
+  </section>
+
+  <section class="bg-blue pb-24 md:pb-160">
+    <ThreeImages img="/stone2.webp" text="Forsvinder aldrig" img2="/seabird1.webp" text2="Truer havmiljøet" img3="/plate3.webp" text3="Ender i fødekæden" />
+  </section>
+
+  <!-- <article id="" class="sticky gradient flex items-center justify-center mt-160" style=" top: 90%; transform: translateY(-50%);">
+    <section class="text-left h-screen w-100 bg-cover bg-center">
+      <h3 class="fadein_text stickyparallax1 text-h3_s md:text-h3_m lg:text-h3 mx-auto text-blue pl-4 lg:pl-0">
+        <span class="text-pink">Plastik Change</span>:
+      </h3>
+      <h3 class="fadein_text1 text-h3_s md:text-h3_m lg:text-h3 mx-auto text-blue pl-4 lg:pl-0">
+        En fremtid med <span class="text-pink">mindre plastik</span>
+      </h3>
+
+      <div class="fadein_text2 flex items-center justify-center max-w-4xl pt-8 pl-4 lg:pl-0">
+        <p class="text-p_s md:text-p_m lg:text-p mx-auto text-blue text-left">Plastic Change arbejder mod en fremtid med mindre plastikforbrug ved at påvirke politiske beslutninger og fremme innovative løsninger i kampen mod plastikforurening.</p>
+      </div>
+      <div class="fadein_text3 flex items-center justify-center max-w-4xl pt-8 pl-4 lg:pl-0">
+        <p class="text-p_s md:text-p_m lg:text-p mx-auto text-blue text-left pt-4">Målet er at beskytte miljøet og fremtidens generationer, og med din støtte kan vi fortsætte kampen.</p>
+      </div>
+    </section>
+  </article> -->
+  <div class="gradient"></div>
+  <article class="sticky flex items-center justify-center z-10" style=" top: 70%; transform: translateY(-50%);">
+    <section class="text-left h-screen w-100 bg-cover bg-center">
+      <h3 class="fadein_text stickyparallax1 text-h3_s md:text-h3_m lg:text-h3 mx-auto text-blue pl-4 lg:pl-0">
+        <span class="text-pink">Plastik Change</span>:
+      </h3>
+      <h3 class="fadein_text1 text-h3_s md:text-h3_m lg:text-h3 mx-auto text-blue pl-4 lg:pl-0">
+        En fremtid med <span class="text-pink">mindre plastik</span>
+      </h3>
+
+      <div class="fadein_text2 flex items-center justify-center max-w-4xl pt-8 pl-4 lg:pl-0">
+        <p class="text-p_s md:text-p_m lg:text-p mx-auto text-blue text-left">Plastic Change arbejder mod en fremtid med mindre plastikforbrug ved at påvirke politiske beslutninger og fremme innovative løsninger i kampen mod plastikforurening.</p>
+      </div>
+      <div class="fadein_text3 flex items-center justify-center max-w-4xl pt-8 pl-4 lg:pl-0">
+        <p class="text-p_s md:text-p_m lg:text-p mx-auto text-blue text-left pt-4">Målet er at beskytte miljøet og fremtidens generationer, og med din støtte kan vi fortsætte kampen.</p>
       </div>
     </section>
   </article>
+
+  <!-- <section class="1">
+    <div class="z-20 relative w-[90vw] h-[70vh] md:w-[80vw] md:h-[80vh] mx-auto bg-white">
+      <h3 class="text-center mb-6 text-gr_s md:text-gr_m lg:text-gr font-bold text-pink">Hvis vi ikke ændrer vores vaner</h3>
+      <span class="absolute left-0 top-1/3 md:left-10 md:top-1/2 -translate-y-1/2 -rotate-90 -ml-12 text-h4_s md:text-h4_m lg:text-h4 text-blue font-bold">Mængde af plastik</span>
+
+      <div class="absolute bottom-64 right-3 md:bottom-24 md:left-5 w-full flex items-center justify-between px-72 -mb-10">
+        <span class="mr-10 md:mr-0 text-h4_s md:text-h4_m lg:text-h4 text-blue font-bold">Nutid</span>
+        <span class="ml-20 md:mr-0 text-h4_s md:text-h4_m lg:text-h4 text-blue font-bold">Fremtid</span>
+      </div>
+
+      <div class="hidden md:block ml-16 md:ml-32 lg:ml-40 z-20 relative w-[70vw] h-[30vh] md:w-[60vw] md:h-[55vh] mx-auto p-8 border-l border-b border-blue bg-white">
+        <div class="grid grid-cols-3">
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle1.svg" alt="Bottle 1" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle2.svg" alt="Bottle 2" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle3.svg" alt="Bottle 3" />
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden ml-16 md:ml-32 lg:ml-40 z-20 relative w-[70vw] h-[30vh] md:w-[60vw] md:h-[55vh] mx-auto p-8 border-l border-b border-blue bg-white">
+        <div class="grid grid-cols-3">
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle_test.webp" alt="Bottle 1" class="w-12 h-auto max-w-full" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle_test.webp" alt="Bottle 2" class="w-16 h-auto max-w-full" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle_test.webp" alt="Bottle 3" class="w-24 h-auto max-w-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="2">
+    <div class="z-20 relative w-[90vw] h-[70vh] md:w-[80vw] md:h-[80vh] mx-auto bg-yellow-300">
+      <h3 class="text-center mb-6 text-gr_s md:text-gr_m lg:text-gr font-bold text-pink">Hvis vi ikke ændrer vores vaner</h3>
+      <span class="absolute left-0 top-1/3 md:left-10 md:top-1/2 -translate-y-1/2 -rotate-90 -ml-12 text-h4_s md:text-h4_m lg:text-h4 text-blue font-bold">Mængde af plastik</span>
+
+      <div class="absolute bottom-64 right-3 md:bottom-24 md:left-5 w-full flex items-center justify-between px-72 -mb-10">
+        <span class="mr-10 md:mr-0 text-h4_s md:text-h4_m lg:text-h4 text-blue font-bold">Nutid</span>
+        <span class="ml-20 md:mr-0 text-h4_s md:text-h4_m lg:text-h4 text-blue font-bold">Fremtid</span>
+      </div>
+
+      <div class="hidden md:block ml-16 md:ml-32 lg:ml-40 z-20 relative w-[70vw] h-[30vh] md:w-[60vw] md:h-[55vh] mx-auto p-8 border-l border-b border-blue bg-white">
+        <div class="grid grid-cols-3">
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle1.svg" alt="Bottle 1" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle2.svg" alt="Bottle 2" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle3.svg" alt="Bottle 3" />
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden ml-16 md:ml-32 lg:ml-40 z-20 relative w-[70vw] h-[30vh] md:w-[60vw] md:h-[55vh] mx-auto p-8 border-l border-b border-blue bg-white">
+        <div class="grid grid-cols-3">
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle_test.webp" alt="Bottle 1" class="w-12 h-auto max-w-full" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle_test.webp" alt="Bottle 2" class="w-16 h-auto max-w-full" />
+          </div>
+          <div class="flex flex-col justify-end items-center">
+            <img src="/bottle_test.webp" alt="Bottle 3" class="w-24 h-auto max-w-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <div class="pt-24 hidden md:block">
+    <article>
+      <div class="flex items-center justify-center min-h-screen bg-white z-20 relative">
+        <BeforeAfterComparison />
+      </div>
+    </article>
+  </div>
+
+  <div class="md:hidden">
+    <article>
+      <div class="flex items-center justify-center min-h-screen bg-white z-20 relative">
+        <Graphs />
+      </div>
+    </article>
+    <article>
+      <div class="flex items-center justify-center min-h-screen bg-white z-20 relative">
+        <Graphtwo />
+      </div>
+    </article>
+  </div>
 </MainLayout>
+<style>
+  .delay {
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  .delay-1 {
+    animation-delay: 2s;
+    animation-duration: 2s;
+  }
+  .delay-2 {
+    animation-delay: 2.5s;
+    animation-duration: 2s;
+  }
+  .delay-3 {
+    animation-delay: 3s;
+    animation-duration: 2s;
+  }
+</style>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline, type OnScroll, type ScrollOptions, type ScrollInfo, ScrollOffset } from "motion";
+  // function scrollCallback(info: ScrollInfo) {
+  //   if (info.y.progress < 0.5) {
+  //     animate(".parallaxgrafik3", {
+  //       x: [1000, -1000],
+  //       y: [-300, 600],
+  //     });
+  //   }
+  // }
+
+  // scroll((info) => scrollCallback(info), {
+  //   target: document.querySelector(".parallaxgrafik"),
+  //   offset: ["start end", "end start"],
+  // });
+
+  scroll(
+    timeline(
+      [
+        [".parallaxgrafik3", { x: [1500, -300], y: [-150, 250] }, { at: 2.5, duration: 2.5 }], // start 25% into scrolling and lasts 25%
+        [".tailgrid", { x: [1500, -300], y: [-150, 250] }, { at: 2.5, duration: 2.5 }],
+        // [".tail", { x: [2000, 200], y: [-125, 275] }, { at: 2.5, duration: 2.5 }],
+        [".parallaxgrafik3", { rotate: 180, y: [250, 400] }, { at: 5.0, duration: 1.0 }],
+        [".tailwindgrid", { rotate: 180, y: [250, 400] }, { at: 5.0, duration: 1.0 }],
+        // [".tail", { opacity: [1, 0] }, { at: 5, duration: 1.0 }],
+        [".parallaxgrafik3", { y: [400, 630] }, { duration: 2.0 }], // start at 5+1 =6
+        [".parallaxgrafik3", { y: [400, 630] }, { duration: 2.0 }],
+      ],
+      { duration: 1.0 }
+    ),
+    {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    }
+  );
+
+  // scroll(
+  //   animate(".parallaxgrafik3", {
+  //     x: [1000, -1000],
+  //     y: [-300, 600],
+  //   }),
+  //   {
+  //     target: document.querySelector(".parallaxgrafik"),
+  //     offset: ["start end", "end start"],
+  //   }
+  // );
+
+  const inviewelementet = document.querySelector(".fadein_text");
+  inView(inviewelementet, () => {
+    inviewelementet.classList.add("animate__animated", "animate__fadeInLeft", "delay");
+  });
+
+  const inviewelementet1 = document.querySelector(".fadein_text1");
+  inView(inviewelementet1, () => {
+    inviewelementet1.classList.add("animate__animated", "animate__fadeInLeft", "delay-1");
+  });
+
+  const inviewelementet2 = document.querySelector(".fadein_text2");
+  inView(inviewelementet2, () => {
+    inviewelementet2.classList.add("animate__animated", "animate__fadeInLeft", "delay-2");
+  });
+
+  const inviewelementet3 = document.querySelector(".fadein_text3");
+  inView(inviewelementet3, () => {
+    inviewelementet3.classList.add("animate__animated", "animate__fadeInLeft", "delay-3");
+  });
+
+  scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
+    target: document.querySelector(".stickyparallax1"),
+  });
+</script>
