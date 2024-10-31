@@ -3,50 +3,68 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="py-5 lg:py-0 px-5 lg:px-10 fixed w-full bg-neutral-100 z-40 border-b-2 shadow-2xl">
-  <div id="navbar" class="flex flex-row justify-end items-center">
-    <div class="flex flex-row items-center gap-10">
-      <div id="logo">
-        <a href="/#"> <img src="logo.webp" alt="logo_header" /> </a>
+<div class="headeranimation">
+  <div x-data="{ showmenu: false }" class="headeranimation1 py-5 lg:py-0 px-5 lg:px-10 fixed w-full bg-neutral-100 z-40 border-b-2 shadow-2xl">
+    <div id="navbar" class="flex flex-row justify-end items-center">
+      <div class="flex flex-row items-center gap-10">
+        <div id="logo">
+          <a href="/#"> <img src="logo.webp" alt="logo_header" class="hidden" /> </a>
+        </div>
+        <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-center items-center gap-4">
+          <ul class="flex flex-row gap-4 md:gap-10 items-center pr-16 md:pl-10">
+            <li class="text-lg font-rubik text-blue"><Link href="#forurening" target="_self" variant="primary" size="small">Om plastikforurening</Link></li>
+            <li class="text-lg font-rubik text-blue"><Link href="#change" target="_self" variant="primary" size="small">Vores formål</Link></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-center items-center gap-4">
-        <ul class="flex flex-row gap-4 md:gap-10 items-center pr-16 md:pl-10">
-          <li class="text-lg font-rubik text-blue"><Link href="/elena_index" variant="primary" size="small">Om plastikforurening</Link></li>
-          <li class="text-lg font-rubik text-blue"><Link href="/elena_index" variant="primary" size="small">Vores formål</Link></li>
+
+      <div class="flex items-center gap-4">
+        <a href="#støt" target="_self"
+          ><div id="desktop-button" class="md:flex justify-center p-16 md:p-6 hidden lg:block hover:scale-110">
+            <Button>Støt os</Button>
+          </div>
+        </a>
+
+        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+          <!-- Burger Icon -->
+          <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9 transition-transform duration-300 text-blue">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav id="mobilmenu" class="pb-20 w-full fixed top-0 left-0 flex flex-col content-center z-80 bg-white" x-show="showmenu" x-transition>
+        <!-- Close Icon -->
+        <button class="absolute top-8 right-4" x-on:click="showmenu = false">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9 text-blue">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <ul class="mt-16">
+          <li class="text-center py-10 border-y-2 text-blue text-lg font-rubik"><Link href="/elena_index">Om plastikforurening</Link></li>
+          <li class="text-center py-10 border-b-2 text-blue text-lg font-rubik"><Link href="/elena_index">Vores formål</Link></li>
         </ul>
+        <div class="flex flex-grow justify-center items-center py-10">
+          <Button class="text-center py-10">Støt os</Button>
+        </div>
       </nav>
     </div>
-
-    <div class="flex items-center gap-4">
-      <a href="/bidrag"
-        ><div id="desktop-button" class="md:flex justify-center p-16 md:p-6 hidden lg:block hover:scale-110">
-          <Button>Støt os</Button>
-        </div>
-      </a>
-
-      <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
-        <!-- Burger Icon -->
-        <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9 transition-transform duration-300 text-blue">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-        </svg>
-      </button>
-    </div>
-
-    <nav id="mobilmenu" class="pb-20 w-full fixed top-0 left-0 flex flex-col content-center z-80 bg-white" x-show="showmenu" x-transition>
-      <!-- Close Icon -->
-      <button class="absolute top-8 right-4" x-on:click="showmenu = false">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9 text-blue">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-
-      <ul class="mt-16">
-        <li class="text-center py-10 border-y-2 text-blue text-lg font-rubik"><Link href="/elena_index">Om plastikforurening</Link></li>
-        <li class="text-center py-10 border-b-2 text-blue text-lg font-rubik"><Link href="/elena_index">Vores formål</Link></li>
-      </ul>
-      <div class="flex flex-grow justify-center items-center py-10">
-        <Button class="text-center py-10">Støt os</Button>
-      </div>
-    </nav>
   </div>
 </div>
+
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, scroll } from "motion";
+
+  scroll(
+    animate(".headeranimation1", {
+      opacity: [1],
+      transform: ["translateY(-150%)", "translateY(0)"],
+    }),
+    {
+      target: document.querySelector(".headeranimation"),
+      offset: ["0vh", "50vh"],
+    }
+  );
+</script>

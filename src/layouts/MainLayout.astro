@@ -6,18 +6,26 @@ import "animate.css";
 const { title } = Astro.props;
 ---
 
-<html lang="da">
+<html lang="da" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Atkinson+Hyperlegible:wght@700&display=swap" rel="stylesheet" />
     <!-- Import GSAP and ScrollTrigger (in <head> or before </body>) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
     <title>{Astro.props.title}</title>
+
+    <!-- SEO -->
+    <meta name="description" content={Astro.props.description} />
+    <meta name="og:locale" content="da_DK" />
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content={Astro.props.ogtitle} />
+    <meta name="og:description" content={Astro.props.ogdescription} />
+    <!-- SEO slut -->
   </head>
   <body>
     <header>
