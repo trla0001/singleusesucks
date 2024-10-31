@@ -26,6 +26,10 @@ export default {
         gr_m: "1.8rem",
         gr_s: "1.4rem",
 
+        knap: "2rem",
+        knap_m: "1.8rem",
+        knap_s: "1rem",
+
         p: "1.3rem",
         p_m: "1rem",
         p_s: "0.9rem",
