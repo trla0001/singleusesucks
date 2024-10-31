@@ -3,12 +3,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import hero from "../assets/images/new_hero.png";
 import ThreeImages from "../components/ThreeImages.astro";
-import fisk from "../assets/images/fish_tail.webp";
+
 import BeforeAfterComparison from "../components/BeforeAfterComparison.astro";
-import Graphs from "../components/Graphs.astro";
-import Graphtwo from "../components/Graphtwo.astro";
 ---
 
 <MainLayout title="Single Use Sucks" description="En hjemmesider der handler om plastikforurening" og:title="Single Use Sucks" og:description="Dette er en hjemmesside lavet af Plastic Change, og omhandler plastikforurening">
@@ -296,7 +293,7 @@ import Graphtwo from "../components/Graphtwo.astro";
   );
 
   /******************* Parallaxgrafik fisk *******************/
-  /* scroll(
+  scroll(
     timeline(
       [
         [".parallaxgrafik3", { x: [1500, -300], y: [-150, 250] }, { at: 2.5, duration: 2.5 }], // start 25% into scrolling and lasts 25%
@@ -315,7 +312,7 @@ import Graphtwo from "../components/Graphtwo.astro";
       offset: ["start end", "end start"],
     }
   );
- */
+
   /******************* Fade in animation til text *******************/
   const inviewelementet = document.querySelector(".fadein_text");
   inView(inviewelementet, () => {
