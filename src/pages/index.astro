@@ -103,7 +103,7 @@ import Graphtwo from "../components/Graphtwo.astro";
     </div>
 
     <div class="flex flex-col items-center h-screen w-100 bg-cover bg-center sticky top-0" style="background-color: white;">
-      <div class="w-full stickyparallax4"><BeforeAfterComparison /></div>
+      <div class="w-full"><BeforeAfterComparison /></div>
     </div>
   </section>
 
@@ -295,22 +295,7 @@ import Graphtwo from "../components/Graphtwo.astro";
     }
   );
 
-  /******************* Fade in animation til text *******************/
-  const inviewelementet = document.querySelector(".fadein_text");
-  inView(inviewelementet, () => {
-    inviewelementet.classList.add("animate__animated", "animate__fadeInLeft", "delay");
-  });
-
-  /******************* Parallaxgrafik sæl *******************/
-  scroll(animate(".parallaxseal1", { x: [400, -30, 400] }), {
-    target: document.querySelector(".parallaxseal"),
-    offset: ["start end", "end start"],
-  });
-</script>
-
-<script>
-  import { animate, stagger, inView, scroll, timeline, type OnScroll, type ScrollOptions, type ScrollInfo, ScrollOffset } from "motion";
-
+  /******************* Parallaxgrafik fisk *******************/
   scroll(
     timeline(
       [
@@ -331,32 +316,15 @@ import Graphtwo from "../components/Graphtwo.astro";
     }
   );
 
-  const inviewelementet1 = document.querySelector(".fadein_text1");
-  inView(inviewelementet1, () => {
-    inviewelementet1.classList.add("animate__animated", "animate__fadeInLeft", "delay-1");
+  /******************* Fade in animation til text *******************/
+  const inviewelementet = document.querySelector(".fadein_text");
+  inView(inviewelementet, () => {
+    inviewelementet.classList.add("animate__animated", "animate__fadeInLeft", "delay");
   });
 
-  const inviewelementet2 = document.querySelector(".fadein_text2");
-  inView(inviewelementet2, () => {
-    inviewelementet2.classList.add("animate__animated", "animate__fadeInLeft", "delay-2");
-  });
-
-  const inviewelementet3 = document.querySelector(".fadein_text3");
-  inView(inviewelementet3, () => {
-    inviewelementet3.classList.add("animate__animated", "animate__fadeInLeft", "delay-3");
-  });
-
-  scroll(animate(".stickyparallax1", { y: [-300, 0] }), {
-    target: document.querySelector(".stickyparallax1"),
-  });
-  scroll(animate(".stickyparallax2", { y: [-300, 0] }), {
-    target: document.querySelector(".stickyparallax2"),
-  });
-
-  scroll(animate(".stickyparallax3", { y: [-300, 0] }), {
-    target: document.querySelector(".stickyparallax3"),
-  });
-  scroll(animate(".stickyparallax4", { y: [-300, 0] }), {
-    target: document.querySelector(".stickyparallax4"),
+  /******************* Parallaxgrafik sæl *******************/
+  scroll(animate(".parallaxseal1", { x: [400, -30, 400] }), {
+    target: document.querySelector(".parallaxseal"),
+    offset: ["start end", "end start"],
   });
 </script>
