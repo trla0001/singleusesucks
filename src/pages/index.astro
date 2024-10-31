@@ -14,7 +14,7 @@ import Graphtwo from "../components/Graphtwo.astro";
 <MainLayout title="Single Use Sucks" description="" og:title="" og:description="">
   <div class="sticky z-50 top-6 px-8 col-span-12"><a href="/#"><img src="logo.webp" alt="" /></a></div>
   <section id="hero" class="bg-blue mt-[-80px]">
-    <div class="grid grid-cols-12 gap-5 auto-rows-[40px]">
+    <div class="grid grid-cols-12 gap-5 auto-rows-[40px] max-w-7xl mx-auto">
       <img src="/img/hero_test.png" alt="" class="z-0 col-span-12" />
       <div class="hidden col-start-3 col-span-4 row-start-5 row-span-3 ml-9 mt-4 z-10"><img src="/img/bag1.png" alt="" /></div>
       <div class="hidden col-start-7 col-span-1 row-start-5 row-span-2 z-10"><img src="/img/bottle2.png" alt="" /></div>
@@ -36,7 +36,7 @@ import Graphtwo from "../components/Graphtwo.astro";
 
   <!-------------------------------------------- FORURENING SEKTION -------------------------------------------->
   <section id="forurening" class="bg-blue text-white">
-    <div class="grid grid-cols-12 parallaxgrafik">
+    <div class="grid grid-cols-12 parallaxgrafik max-w-7xl mx-auto">
       <div class="col-start-1 col-span-2 row-start-2 row-span-1 mt-[-100px] lg:mt-0 z-10"><img src="/img/bottle10.png" alt="" /></div>
       <div class="col-start-5 col-span-3 row-start-1 row-span-2 mt-[-100px] lg:mt-0 z-10"><img src="/img/bottle11.png" alt="" /></div>
       <div class="col-start-8 col-span-2 row-start-2 row-span-2 z-10"><img src="/img/bottle12.png" alt="" /></div>
@@ -53,9 +53,9 @@ import Graphtwo from "../components/Graphtwo.astro";
         <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">
           Forureningen opstår blandt andet, når plastik ender i naturen. Her viser beregninger at det kan tage op til <span class="font-bold">500 år</span> før det nedbrydes til mikroplastik. Man ved faktisk ikke om det forsvinder helt.
         </p>
-        <article class="crossfadeimages scrollzoom mx-auto relative h-screen lg:w-screen my-32 flex items-center justify-center">
-          <img src="/img/pose_mikroplast.png" alt="" class="crossfadetopimg scrollzoomimg object-cover h-screen absolute top-0 z-0 my-0" />
-          <img src="/img/pose.png" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0" />
+        <article class="crossfadeimages scrollzoom mx-auto relative h-screen lg:w-screen my-20 flex items-center justify-center">
+          <img src="/img/pose_mikroplast.webp" alt="" class="crossfadetopimg scrollzoomimg object-cover h-screen absolute top-0 z-0 my-0" />
+          <img src="/img/pose.webp" alt="" class="crossfadebottomimg object-cover h-screen absolute top-0 z-0 my-0 -rotate-90" />
         </article>
         <p class="text-p_s md:text-p_m lg:text-p text-white max-w-4xl mx-auto">I havet er det solens UV-stråler der gør plastikken skrøbelig, og havets kræfter nedbryder den i millioner af små stykker.</p>
       </article>
@@ -135,7 +135,7 @@ import Graphtwo from "../components/Graphtwo.astro";
   </div>
 
   <!-------------------------------------------- STØT SEKTION -------------------------------------------->
-  <section id="støt" class="my-32 text-blue bg-white z-30">
+  <section id="støt" class="my-32 text-blue bg-white z-30 max-w-7xl mx-auto">
     <article>
       <h3 class="text-h3_s md:text-h3_m lg:text-h3 text-blue text-center mb-8">Hjælp os med at <span class="text-pink">stoppe forureningen</span> i dag</h3>
       <div class="grid md:grid-cols-2 items-center auto-rows-min">
