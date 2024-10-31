@@ -6,6 +6,7 @@ export default {
       colors: {
         blue: "rgba(0, 9, 26, 1)",
         pink: "rgba(235, 55, 88, 1)",
+        pink_knap: "rgba(217, 22, 58, 1)",
         white: "rgba(255, 255, 255, 1)",
         dark_pink: "rgba(223, 22, 59, 1)",
       },
